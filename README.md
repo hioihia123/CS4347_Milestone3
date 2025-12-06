@@ -37,7 +37,7 @@ Github link: https://github.com/hioihia123/CS4347_Milestone3
 
 4. How to Run the Project
 Step 1: Clone the Repository
-  Github repo link: https://github.com/hioihia123/CS4347_Milestone2
+  Github repo link: https://github.com/hioihia123/CS4347_Milestone3
 
   Clone this repository to your local machine using your preferred IDE or command line.
 
