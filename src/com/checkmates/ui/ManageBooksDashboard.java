@@ -201,7 +201,7 @@ public class ManageBooksDashboard extends JFrame {
                 JSONArray booksArray = json.getJSONArray("books");
                 
                 // Columns required by Milestone 2
-                String[] columnNames = {"ISBN", "Book Title", "Authors", "Availability"};
+                String[] columnNames = {"ISBN", "Book Title", "Authors", "Availability","Borrower_ID"};
                 ArrayList<String[]> rowData = new ArrayList<>();
 
                 for (int i = 0; i < booksArray.length(); i++) {
@@ -210,8 +210,10 @@ public class ManageBooksDashboard extends JFrame {
                     String title = obj.optString("Title");
                     String authors = obj.optString("Authors"); // Comma separated
                     String availability = obj.optString("Availability"); // "IN" or "OUT"
+                    String borrowerID = obj.isNull("Borrower_ID")      ? "NULL" : obj.optString("Borrower_ID");
+
                     
-                    rowData.add(new String[]{isbn, title, authors, availability});
+                    rowData.add(new String[]{isbn, title, authors, availability, borrowerID});
                 }
 
                 String[][] data = rowData.toArray(new String[0][]);
